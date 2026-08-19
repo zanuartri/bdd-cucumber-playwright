@@ -1,8 +1,6 @@
 # BDD Cucumber + Playwright
 
-![CI](https://github.com/OWNER/REPO/actions/workflows/ci.yml/badge.svg)
-
-<!-- replace OWNER/REPO above once this is pushed to GitHub -->
+![CI](https://github.com/zanuartri/bdd-cucumber-playwright/actions/workflows/ci.yml/badge.svg)
 
 Web UI test automation using **Cucumber** (Gherkin, test runner) driving **Playwright** (browser automation), written in TypeScript.
 
