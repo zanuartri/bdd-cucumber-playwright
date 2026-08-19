@@ -40,11 +40,16 @@ jobs:
       - name: Publish results to QA dashboard
         if: always()
         run: |
-          curl -sf -X POST "https://qa.zanuar.dev/api/results/bdd-cucumber-playwright" \
+          status=$(curl -s -o /tmp/webhook_response.json -w "%{http_code}" -X POST \
+            "https://qa.zanuar.dev/api/results/bdd-cucumber-playwright" \
             -H "Authorization: Bearer ${{ secrets.QA_DASHBOARD_TOKEN }}" \
             -H "Content-Type: application/json" \
-            --data @results/results.json \
-          || echo "::warning::failed to publish results to qa.zanuar.dev, dashboard may be stale"
+            --data @results/results.json)
+          echo "webhook responded HTTP $status:"
+          cat /tmp/webhook_response.json
+          if [ "$status" != "200" ]; then
+            echo "::warning::failed to publish results to qa.zanuar.dev (HTTP $status), dashboard may be stale"
+          fi
 
       - name: Fail build if tests failed
         if: steps.cucumber.outcome == 'failure'
