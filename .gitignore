@@ -1,0 +1,3 @@
+node_modules/
+dist/
+results/cucumber-report.json

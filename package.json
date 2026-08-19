@@ -1,0 +1,20 @@
+{
+  "name": "bdd-cucumber-playwright",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BDD web UI test automation with Cucumber + Playwright (TypeScript)",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:report": "npm run test; npm run report",
+    "report": "ts-node scripts/transform-results.ts",
+    "pretest": "playwright install --with-deps chromium"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.1.1",
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.1",
+    "playwright": "^1.49.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}

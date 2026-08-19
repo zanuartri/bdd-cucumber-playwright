@@ -1,0 +1,72 @@
+{
+  "stack": "bdd-cucumber-playwright",
+  "platform": "web",
+  "run_at": "2026-08-19T00:55:16.426Z",
+  "total": 12,
+  "passed": 12,
+  "failed": 0,
+  "skipped": 0,
+  "duration_seconds": 57.019,
+  "tests": [
+    {
+      "name": "Content that is hidden until loading finishes",
+      "status": "passed",
+      "duration": 9.925
+    },
+    {
+      "name": "Content that is only rendered once loading finishes",
+      "status": "passed",
+      "duration": 12.343
+    },
+    {
+      "name": "Successfully uploading a file",
+      "status": "passed",
+      "duration": 4.136
+    },
+    {
+      "name": "Submitting the checkout form with no information",
+      "status": "passed",
+      "duration": 0.595
+    },
+    {
+      "name": "Submitting the checkout form without a last name",
+      "status": "passed",
+      "duration": 0.601
+    },
+    {
+      "name": "Submitting the checkout form without a postal code",
+      "status": "passed",
+      "duration": 0.579
+    },
+    {
+      "name": "Successfully completing the checkout form",
+      "status": "passed",
+      "duration": 0.621
+    },
+    {
+      "name": "Successful login with valid credentials",
+      "status": "passed",
+      "duration": 6.51
+    },
+    {
+      "name": "Rejected login with invalid credentials",
+      "status": "passed",
+      "duration": 6.082
+    },
+    {
+      "name": "Rejected login with invalid credentials",
+      "status": "passed",
+      "duration": 6.043
+    },
+    {
+      "name": "Rejected login with invalid credentials",
+      "status": "passed",
+      "duration": 5.23
+    },
+    {
+      "name": "Rejected login with invalid credentials",
+      "status": "passed",
+      "duration": 4.354
+    }
+  ]
+}
